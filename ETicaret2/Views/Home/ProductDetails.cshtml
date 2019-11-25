@@ -1,0 +1,375 @@
+﻿@using ETicaret2.Models.Model
+@model Product
+@{
+    ViewBag.Title = "ProductDetails";
+}
+
+<div id="mainBody">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar ================================================== -->
+            <div id="sidebar" class="span3">
+
+
+                @Html.Action("Summary", "Cart")
+
+
+                <ul id="sideManu" class="nav nav-tabs nav-stacked">
+                    <li class="subMenu open">
+
+                    </li>
+
+                    @Html.Action("_CategoryList", "Category")
+
+                </ul>
+                <br>
+                @Html.Action("FeaturedProductList", "Home")
+            </div>
+            <!-- Sidebar end=============================================== -->
+            <div class="span9">
+                <ul class="breadcrumb">
+                    <li><a href="/Home/Index">Ana Sayfa</a> <span class="divider">/</span></li>
+                    <li><a href="/Home/Product">Ürünler</a> <span class="divider">/</span></li>
+                    <li class="active">Ürün Detayları</li>
+                </ul>
+                <div class="row">
+                    <div id="gallery" class="span3">
+                        <br />
+                        <a href="~/Content/Images/@Model.Image">
+
+                            <img src="~/Content/Images/@Model.Image" style="width:100%" />
+                            
+                        </a>
+                        
+
+
+                        </div>
+
+
+
+
+
+                        <div class="span6">
+                            <ul id="productDetail" class="nav nav-tabs">
+                                <li class="active"><a href="#home" data-toggle="tab">Ürün Detayı</a></li>
+
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade active in" id="home">
+                                    <h4>Product Information</h4>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr class="techSpecRow"><th colspan="2">Ürün Detay</th></tr>
+                                            <tr class="techSpecRow"><td class="techSpecTD1">Adı: </td><td class="techSpecTD2">@Model.Name</td></tr>
+                                            <tr class="techSpecRow"><td class="techSpecTD1">Açıklama:</td><td class="techSpecTD2">@Model.Description</td></tr>
+                                            <tr class="techSpecRow"><td class="techSpecTD1">Fiyat:</td><td class="techSpecTD2">@Model.Price TL</td></tr>
+                                            <tr class="techSpecRow"><td class="techSpecTD1">Adet:</td><td class="techSpecTD2"> @Model.Stock</td></tr>
+                                            <tr class="techSpecRow">
+                                                <th colspan=" 2">
+
+
+                                                    @using (Html.BeginForm("AddToCart", "Cart"))
+                                                    {
+                                                        @Html.HiddenFor(i => i.Id)
+
+
+
+
+
+
+                                                        
+
+                                                            <button type="submit" class=" btn btn-large btn-primary pull-left-right">Sepete ekle<i class=" icon-shopping-cart"></i></button>
+
+
+
+
+                                                    }
+</div>
+                                                    </div>
+
+
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h5>Features</h5>
+                                    <p>
+                                        @Model.Description
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <div id="myTab" class="pull-right">
+                                        <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
+                                        <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
+                                    </div>
+                                    <br class="clr">
+                                    <hr class="soft">
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="listView">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/4.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <hr class="soft">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/5.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <hr class="soft">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/6.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <hr class="soft">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/7.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <hr class="soft">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/8.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <hr class="soft">
+                                            <div class="row">
+                                                <div class="span2">
+                                                    <img src="/Magaza/bootstrap-shop/themes//images/products/9.jpg" alt="">
+                                                </div>
+                                                <div class="span4">
+                                                    <h3>New | Available</h3>
+                                                    <hr class="soft">
+                                                    <h5>Product Name </h5>
+                                                    <p>
+                                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
+                                                        that is why our goods are so popular..
+                                                    </p>
+                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <br class="clr">
+                                                </div>
+                                                <div class="span3 alignR">
+                                                    <form class="form-horizontal qtyFrm">
+                                                        <h3> $222.00</h3>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox">  Adds product to compair
+                                                        </label><br>
+                                                        <div class="btn-group">
+                                                            <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                                            <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <hr class="soft">
+                                        </div>
+                                        <div class="tab-pane active" id="blockView">
+                                            <ul class="thumbnails">
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/10.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/11.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/12.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/13.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/1.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="span3">
+                                                    <div class="thumbnail">
+                                                        <a href="product_details.html"><img src="/Magaza/bootstrap-shop/themes//images/products/2.jpg" alt=""></a>
+                                                        <div class="caption">
+                                                            <h5>Manicure &amp; Pedicure</h5>
+                                                            <p>
+                                                                Lorem Ipsum is simply dummy text.
+                                                            </p>
+                                                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <hr class="soft">
+                                        </div>
+                                    </div>
+                                    <br class="clr">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

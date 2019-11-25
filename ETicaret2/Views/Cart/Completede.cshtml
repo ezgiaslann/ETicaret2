@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Completede";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div id="mainBody">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar ================================================== -->
+                <div id="sidebar" class="span3">
+
+                    @Html.Action("Summary", "Cart")
+
+                    <ul id="sideManu" class="nav nav-tabs nav-stacked">
+
+
+                        @Html.Action("_CategoryList", "Category")
+
+
+
+                    </ul>
+                    <br />
+                    @Html.Action("FeaturedProductList", "Home")
+                </div>
+                <!-- Sidebar end=============================================== -->
+                <div class="span9">
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">x</button>
+                        <strong >Başarılı!</strong>Satın aldığınızürünler en kısa zamanda kargoya verilecektir.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,83 @@
+﻿@using ETicaret2.Models
+@model IEnumerable<ProductModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@Html.Action("_Slider", "Home")
+
+
+     
+            
+<div id="mainBody">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar ================================================== -->
+            <div id="sidebar" class="span3">
+
+                @Html.Action("Summary", "Cart")
+
+                <ul id="sideManu" class="nav nav-tabs nav-stacked">
+
+
+                    @Html.Action("_CategoryList", "Category")
+
+
+
+                </ul>
+                <br />
+                @Html.Action("FeaturedProductList", "Home")
+            </div>
+            <!-- Sidebar end=============================================== -->
+            <div class="span9">
+                <div class="well well-small">
+
+                    <div class="row-fluid">
+                        <div id="featured" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+
+
+
+
+
+
+                                    <a class="left carousel-control" href="#featured" data-slide="prev">‹</a>
+                                    <a class="right carousel-control" href="#featured" data-slide="next">›</a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h4>Öne Çıkan Ürünler </h4>
+                <ul class="thumbnails">
+                    @foreach (var item in Model)
+                    {
+                        <li class="span3">
+                            <div class="thumbnail" style="width:270px;height:310px">
+                                <a href="/Home/ProductDetails/@item.Id"><img style="width:160px; height:120px; max-width:160px; max-height:160px;" src="~/Content/Images/@item.Image" alt="" /></a>
+                                <div class="caption" style="width:260px; height:140px;">
+                                    <h5> <a href="/Home/ProductDetails/@item.Id">@item.Name</a> </h5>
+                                    <p>
+                                        @item.Description
+                                    </p>
+
+                                    <h4 style="text-align:center"><a class="btn" href="/Home/ProductDetails/@item.Id"> Görüntüle... <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary">@item.Price TL</a></h4>
+                                </div>
+
+                            </div>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

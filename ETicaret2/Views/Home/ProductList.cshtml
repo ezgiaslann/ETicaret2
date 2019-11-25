@@ -1,0 +1,256 @@
+﻿@using ETicaret2.Models.Model
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="mainBody">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar ================================================== -->
+            <div id="sidebar" class="span3">
+
+                @Html.Action("Summary", "Cart")
+
+                <ul id="sideManu" class="nav nav-tabs nav-stacked">
+                    <li class="subMenu open">
+
+                    </li>
+
+                    @Html.Action("_CategoryList", "Category")
+
+                    
+
+                </ul>
+                <br>
+
+                @Html.Action("FeaturedProductList", "Home")
+
+            </div>
+            <!-- Sidebar end=============================================== -->
+            <div class="span9">
+                <ul class="breadcrumb">
+                    <li><a href="/Home/Index">AnaSayfa</a> <span class="divider">/</span></li>
+                    <li class="active">Ürünler</li>
+                </ul>
+                <h3> Ürün İsimleri <small class="pull-right">   </small></h3>
+                <hr class="soft">
+                <p>
+
+                </p>
+                <hr class="soft">
+                <form class="form-horizontal span6">
+                    <div class="control-group">
+                        
+                            
+                        
+                    </div>
+                </form>
+
+                <div id="myTab" class="pull-right">
+                    
+                </div>
+                <br class="clr">
+                <div class="tab-content">
+                    <div class="tab-pane" id="listView">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/3.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="soft">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/1.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="soft">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/3.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="soft">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/3.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <hr class="soft">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/3.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="soft">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="/Magaza/bootstrap-shop/themes//images/products/3.jpg" alt="">
+                            </div>
+                            <div class="span4">
+                                <h3>New | Available</h3>
+                                <hr class="soft">
+                                <h5>Product Name </h5>
+                                <p>
+
+                                </p>
+                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <br class="clr">
+                            </div>
+                            <div class="span3 alignR">
+                                <form class="form-horizontal qtyFrm">
+                                    <h3> $140.00</h3>
+                                    <label class="checkbox">
+                                        <input type="checkbox">  Adds product to compair
+                                    </label><br>
+
+                                    <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                                    <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="soft">
+                    </div>
+
+                    <div class="tab-pane  active" id="blockView">
+                        <ul class="thumbnails">
+                            @foreach (var item in Model)
+                            {
+                                <li class="span3">
+                                    <div class="thumbnail" style="width:270px;height:310px">
+                                        <a href="/Home/ProductDetails/@item.Id"><img style="width:160px; height:120px; max-width:160px; max-height:160px;" src="~/Content/Images/@item.Image" alt="" /></a>
+                                        <div class="caption" style="width:260px; height:140px">
+                                            <h5> <a href="/Home/ProductDetails/@item.Id">@item.Name</a></h5>
+                                            <p>
+                                                @item.Description
+                                            </p>
+
+                                            <h4 style="text-align:center"><a class="btn" href="/Home/ProductDetails/@item.Id">Görüntüle... <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">@item.Price (TL)</a></h4>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                        <hr class="soft">
+                    </div>
+                </div>
+
+               
+                <br class="clr">
+            </div>
+        </div>
+    </div>
+</div>
+
+

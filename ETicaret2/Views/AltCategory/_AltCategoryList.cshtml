@@ -1,0 +1,13 @@
+﻿@using ETicaret2.Models
+@model IEnumerable<AltCategoryModel>
+
+  
+
+@foreach (var item in Model)
+{
+
+    <li><a href="/Home/ProductList/@item.AltCategoryId">@item.Name [@item.Count]</a></li>
+
+}
+
+
