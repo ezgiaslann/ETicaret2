@@ -3,137 +3,77 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<section class="conten"><div class="row">
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-aqua">
-            <div class="inner">
-                <h3>
-                    @Model.UrunSayisi
-                </h3>
-                <p>
-                    Ürün Sayısı
-                </p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-bag"></i>
-            </div>
-            <a href="/Product/Index" class="small-box-footer">
-                Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div><!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-green">
-            <div class="inner">
-                <h3>
-                    53
-                </h3>
-                <p>
-                    Sipariş Sayısı
-                </p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-                Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div><!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-yellow">
-            <div class="inner">
-                <h3>
-                    44
-                </h3>
-                <p>
-                    Bekleyen Siparişler
-                </p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-                Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div><!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-red">
-            <div class="inner">
-                <h3>
-                    65
-                </h3>
-                <p>
-                    Tamamlanan Siparişler
-                </p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-                Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
-            </a>
-        </div>
-    </div>
+    <style>
+        .steelblue {
+            color: steelblue;
+        }
+    </style>
 
-
-
-
-
-        @*<div class="col-lg-3 col-xs-6">
+<h1 class="steelblue">Admin Paneli</h1>
+<hr class="soft">
+<section class="conten">
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
             <!-- small box -->
             <div class="small-box bg-aqua">
                 <div class="inner">
                     <h3>
-                        150
+                        @Model.UrunSayisi
                     </h3>
                     <p>
-                        Paketlenen Siparişler
+                        Ürün Sayısı
                     </p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="/Product/Index" class="small-box-footer">
                     Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div><!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-green">
-                <div class="inner">
-                    <h3>
-                        53
-                    </h3>
-                    <p>
-                        Kargolanan Siparişler
-                    </p>
+        <!-- ./col -->
+        <!-- ./col -->
+        @*<div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>
+                            150
+                        </h3>
+                        <p>
+                            Paketlenen Siparişler
+                        </p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">
+                        Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-                <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>
+                            53
+                        </h3>
+                        <p>
+                            Kargolanan Siparişler
+                        </p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">
+                        Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-                <a href="#" class="small-box-footer">
-                    Ayrıntılar... <i class="fa fa-arrow-circle-right"></i>
-                </a>
-            </div>
-        </div><!-- ./col -->*@
-
-
-
-
-
-
-
-
-
+            </div><!-- ./col -->*@
     </div><!-- ./col -->
 
-    </section>
-    
+</section>
+
 
